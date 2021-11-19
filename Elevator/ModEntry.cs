@@ -22,7 +22,7 @@ namespace Elevator
 			ElevatorBuildingTexture = helper.Content.Load<Texture2D>("Hotel.png");//Must be before PatchAll
 			
 			//Harmony patch everything
-			Patch.PatchAll("me.ilyaki.elevator");
+			Patch.PatchAll(this.ModManifest.UniqueID);
 
 			//Commands
 			helper.ConsoleCommands.Add("elevator_goto", "Warp to cabin. first arg is name of player", this.Goto);
